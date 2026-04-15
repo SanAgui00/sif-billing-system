@@ -122,10 +122,11 @@ src/com/prosa/sif/
 - Code reviews, refactoring y optimización de rendimiento en sprints Agile
 
 ---
-
-### License
-
-This repository is shared for portfolio and educational purposes. The original codebase was developed at Código Geek S.A.S. All client-specific data, credentials, and internal configurations have been removed.
+### Preparation for Portfolio
+This codebase was originally developed at Código Geek S.A.S. (2019–2021).
+For GitHub portfolio purposes, the code was sanitized (credentials removed, 
+build artifacts cleaned) and documentation was added. All source code and 
+business logic remains the original work from my time at Código Geek.
 
 ### Contact
 
