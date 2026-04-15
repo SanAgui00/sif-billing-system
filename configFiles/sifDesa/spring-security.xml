@@ -36,11 +36,12 @@
 	<!-- LDAP -->
 	<security:authentication-manager>
 		<security:ldap-authentication-provider
-			user-search-filter="(uid={0})" user-search-base="o=prosa.com.mx, o=isp"
-			group-search-base="ou=SILFA,ou=Aplicaciones,o=prosa.com.mx, o=isp">
+			user-search-filter="(uid={0})" user-search-base="${ldap.search.base}"
+			group-search-base="${ldap.group.base}">
 		</security:ldap-authentication-provider>
 	</security:authentication-manager>
 
-	<security:ldap-server url="ldap://192.168.1.129:1389"/>
+	<security:ldap-server url="${ldap.url}"
+		manager-dn="${ldap.manager.dn}" manager-password="${ldap.password}" />
 <!-- desarrollo -->
 </beans>

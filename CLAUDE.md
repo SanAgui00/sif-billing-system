@@ -25,13 +25,13 @@ configFiles/sifProd/spring-security.xml
 ```
 
 En CADA archivo, reemplazar:
-- `manager-password="Id3nt1tyss0"` → `manager-password="${ldap.password}"`
-- `url="ldap://10.255.41.67:1389"` → `url="${ldap.url}"`
-- `url="ldap://ldapApp.prosa.com.mx:389"` → `url="${ldap.url}"`
-- `manager-dn="cn=IdentitySSO,ou=People,o=isp"` → `manager-dn="${ldap.manager.dn}"`
-- `user-search-base="o=prosa.com.mx, o=isp"` → `user-search-base="${ldap.search.base}"`
-- `group-search-base="ou=Silfa,ou=Aplicaciones,o=prosa.com.mx, o=isp"` → `group-search-base="${ldap.group.base}"`
-- Lo mismo para `group-search-base="ou=SILFA,..."` en prod
+- `manager-password="<REDACTED>"` → `manager-password="${ldap.password}"`
+- `url="ldap://<REDACTED-IP>:<PORT>"` → `url="${ldap.url}"`
+- `url="ldap://<REDACTED-HOST>"` → `url="${ldap.url}"`
+- `manager-dn="<REDACTED>"` → `manager-dn="${ldap.manager.dn}"`
+- `user-search-base="<REDACTED>"` → `user-search-base="${ldap.search.base}"`
+- `group-search-base="<REDACTED>"` → `group-search-base="${ldap.group.base}"`
+- Lo mismo para `group-search-base` en prod
 
 ### 2. ELIMINAR BUILD ARTIFACTS
 ```bash
