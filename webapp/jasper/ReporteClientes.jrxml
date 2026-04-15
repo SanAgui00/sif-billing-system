@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteClientes" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ab4ee835-5c9d-4731-886b-e1c0ca2f37f5">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="OracleDB"/>
+	<queryString>
+		<![CDATA[select * from TBL_SIF_CAT_CLIENTES]]>
+	</queryString>
+	<field name="ID_CLIENTE" class="java.math.BigDecimal"/>
+	<field name="CLAVE_CLIENTE" class="java.lang.String"/>
+	<field name="ID_GRUPO_VOL" class="java.math.BigDecimal"/>
+	<field name="ID_DOMICILIO" class="java.math.BigDecimal"/>
+	<field name="NOMBRE_CORTO" class="java.lang.String"/>
+	<field name="RAZON_SOCIAL" class="java.lang.String"/>
+	<field name="RFC" class="java.lang.String"/>
+	<field name="CURP" class="java.lang.String"/>
+	<field name="FIID" class="java.math.BigDecimal"/>
+	<field name="PCT_IVA" class="java.math.BigDecimal"/>
+	<field name="TELEFONO_PRIC" class="java.lang.String"/>
+	<field name="B_CLIENTE_CONSORCIO" class="java.math.BigDecimal"/>
+	<field name="B_CLIENTE_NACIONAL" class="java.math.BigDecimal"/>
+	<field name="B_CLIENTE_SOCIO" class="java.math.BigDecimal"/>
+	<field name="B_INCLUIR_REBATE" class="java.math.BigDecimal"/>
+	<field name="INF_ADDICIONAL" class="java.lang.String"/>
+	<field name="INF_ADDICIONAL_1" class="java.lang.String"/>
+	<field name="USUARIO" class="java.lang.String"/>
+	<field name="ESTATUS" class="java.lang.String"/>
+	<field name="FECHA_MOD" class="java.sql.Timestamp"/>
+	<field name="COMENTARIOS" class="java.lang.String"/>
+	<field name="CLAVE_FORMAPAGO_SAT" class="java.lang.String"/>
+	<field name="CLAVE_RESIDFISCAL_SAT" class="java.lang.String"/>
+	<field name="NUMERO_IDFISCAL_SAT" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="75">
+			<staticText>
+				<reportElement x="270" y="8" width="510" height="59" uuid="54e656e2-861e-4148-98bf-db21ea6d0d55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[Reporte de Catalogo de Clientes]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="100" height="20" uuid="c9e7a2ba-b158-46c4-8052-47d73fe8a140"/>
+				<text><![CDATA[CLAVE_CLIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="10" width="100" height="20" uuid="7eeb337a-e726-4e0e-a322-a025fd511a78"/>
+				<text><![CDATA[NOMBRE_CORTO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="100" height="20" uuid="e218561e-71cb-4215-9191-41b4ca65fb17"/>
+				<textFieldExpression><![CDATA[$F{CLAVE_CLIENTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="10" width="100" height="20" uuid="b20193cd-1743-44f7-b71f-243e9317b813"/>
+				<textFieldExpression><![CDATA[$F{NOMBRE_CORTO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="68" y="7" width="100" height="20" uuid="de4af000-c8d3-4ae9-9557-85744e0b6346"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="670" y="7" width="100" height="20" uuid="46fd79a5-cef2-4170-90a8-1f99506a3e26"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="7" width="100" height="20" uuid="6c098dca-37af-4151-b241-8cc69d48309b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="410" y="7" width="100" height="20" uuid="ad07e7bd-a518-4c95-8bf4-a4b01152af90"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" De " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,173 @@
+/**
+################################################################################
+# Autor               : Loredo                                                 #
+# Compania            : Código Geek                                            #
+# Proyecto/Procliente :                                      Fecha: 10/07/2018 #
+# Descripcion General : 										               #
+# Marca del cambio    : 									                   #
+################################################################################
+**/
+
+package com.prosa.sif.pojo;
+
+import java.math.BigDecimal;
+import java.util.Date;
+
+public class ODT_VIGENTE {
+
+	private BigDecimal neto;
+	private Date fecha_datos;
+	private BigDecimal total;
+	private BigDecimal iva;
+	private BigDecimal importe;
+	private BigDecimal numero_odt;
+	private String descripcion;
+	private String tipo;
+	private String clave_negocio;
+	private String clave_cliente;
+	private String folio;
+	private String desc_negocio;
+	private String nombre_corto;
+	private String estatus;
+
+	public ODT_VIGENTE(BigDecimal neto, Date fecha_datos, BigDecimal total, BigDecimal iva, BigDecimal importe,
+			BigDecimal numero_odt, String descripcion, String tipo, String clave_negocio, String clave_cliente,
+			String folio, String desc_negocio, String nombre_corto, String estatus) {
+		super();
+		this.neto = neto;
+		this.fecha_datos = fecha_datos;
+		this.total = total;
+		this.iva = iva;
+		this.importe = importe;
+		this.numero_odt = numero_odt;
+		this.descripcion = descripcion;
+		this.tipo = tipo;
+		this.clave_negocio = clave_negocio;
+		this.clave_cliente = clave_cliente;
+		this.folio = folio;
+		this.desc_negocio = desc_negocio;
+		this.nombre_corto = nombre_corto;
+		this.estatus = estatus;
+	}
+
+	public BigDecimal getNeto() {
+		return neto;
+	}
+
+	public void setNeto(BigDecimal neto) {
+		this.neto = neto;
+	}
+
+	public Date getFecha_datos() {
+		return fecha_datos;
+	}
+
+	public void setFecha_datos(Date fecha_datos) {
+		this.fecha_datos = fecha_datos;
+	}
+
+	public BigDecimal getTotal() {
+		return total;
+	}
+
+	public void setTotal(BigDecimal total) {
+		this.total = total;
+	}
+
+	public BigDecimal getIva() {
+		return iva;
+	}
+
+	public void setIva(BigDecimal iva) {
+		this.iva = iva;
+	}
+
+	public BigDecimal getImporte() {
+		return importe;
+	}
+
+	public void setImporte(BigDecimal importe) {
+		this.importe = importe;
+	}
+
+	public BigDecimal getNumero_odt() {
+		return numero_odt;
+	}
+
+	public void setNumero_odt(BigDecimal numero_odt) {
+		this.numero_odt = numero_odt;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public String getClave_negocio() {
+		return clave_negocio;
+	}
+
+	public void setClave_negocio(String clave_negocio) {
+		this.clave_negocio = clave_negocio;
+	}
+
+	public String getClave_cliente() {
+		return clave_cliente;
+	}
+
+	public void setClave_cliente(String clave_cliente) {
+		this.clave_cliente = clave_cliente;
+	}
+
+	public String getFolio() {
+		return folio;
+	}
+
+	public void setFolio(String folio) {
+		this.folio = folio;
+	}
+
+	public String getDesc_negocio() {
+		return desc_negocio;
+	}
+
+	public void setDesc_negocio(String desc_negocio) {
+		this.desc_negocio = desc_negocio;
+	}
+
+	public String getNombre_corto() {
+		return nombre_corto;
+	}
+
+	public void setNombre_corto(String nombre_corto) {
+		this.nombre_corto = nombre_corto;
+	}
+
+	public String getEstatus() {
+		return estatus;
+	}
+
+	public void setEstatus(String estatus) {
+		this.estatus = estatus;
+	}
+
+	@Override
+	public String toString() {
+		return "ODT_VIGENTE [neto=" + neto + ", total=" + total + ", iva=" + iva + ", importe=" + importe
+				+ ", numero_odt=" + numero_odt + ", descripcion=" + descripcion + ", tipo=" + tipo + ", clave_negocio="
+				+ clave_negocio + ", clave_cliente=" + clave_cliente + ", folio=" + folio + ", desc_negocio="
+				+ desc_negocio + ", nombre_corto=" + nombre_corto + ", estatus=" + estatus + "]";
+	}
+
+}
