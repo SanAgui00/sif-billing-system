@@ -1,0 +1,96 @@
+// ESTILOS BARRA LATERAL DE NAVEGACION
+@import bits
+.sidebar
+	z-index: 1000 
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	border: $border
+	border-top: none
+	border-bottom: none
+	border-left: none
+
+.sidebar.active
+	margin-left: -20%
+
+.nav
+	div
+		padding: 0
+		&:hover
+			cursor: pointer
+		a
+			&:hover:not(.not), &:active, &:focus
+				li
+					span
+						color: $color-red
+		li
+			color: $color-black
+	.dropdown-submenu
+		padding: 0.3rem 10px $i
+		&:hover
+			background-color: $color-grey
+			color: $color-red
+		.dropdown-submenu
+			padding: 0 $i
+				
+.divider
+	color: $color-black $i
+	line-height: 30px
+	font-weight: 600
+	text-transform: capitalize
+	font-size: 12px
+	letter-spacing: 1px
+.not
+	padding: 10px 15px 0px 15px $i
+
+.dropdown-toggle::after
+	border: none $i
+	margin: none $i
+	content: none $i
+
+.dropdown-menu
+	padding: 0 $i
+	border: none $i
+	border-radius: 0
+.dropdown-item
+	padding: 0.3rem 10px $i
+	&:active
+		background-color: $color-grey 
+		color: $color-red $i
+	&:focus
+		background-color: $color-grey 
+		color: $color-red $i
+	&:hover
+		background-color: $color-grey
+		color: $color-red $i
+	
+.dropdown-submenu 
+	padding: 0px $i
+	position: relative
+	> .dropdown-menu
+		top: 0
+		left: 100%
+		margin-top: 0px
+		margin-left: 0px
+	&:hover
+		> .dropdown-menu
+			display: block
+	.pull-left
+		float: none
+		> .dropdown-menu
+			left: -100%
+			margin-left: 10px
+
+.list-menu
+	columns: 3
+	-webkit-columns: 3
+	-moz-columns: 3
+
+.list-menu-2
+	columns: 2
+	-webkit-columns: 2
+	-moz-columns: 2
+

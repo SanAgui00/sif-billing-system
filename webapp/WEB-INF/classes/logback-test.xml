@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<configuration>
+	<property name="APLICATIVO" value="sif" />
+	<!-- log de la aplicación -->
+	<appender name="${APLICATIVO}" class="ch.qos.logback.core.FileAppender">
+		<file>${jboss.server.log.dir}/${APLICATIVO}/${APLICATIVO}.log</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level - %msg %n
+			</pattern>
+		</encoder>
+	</appender>
+	<!-- log de errores -->
+	<appender name="${APLICATIVO}_err" class="ch.qos.logback.core.FileAppender">
+		<file>${jboss.server.log.dir}/${APLICATIVO}/${APLICATIVO}_err.log
+		</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level - %msg %n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<!-- log de db -->
+	<appender name="${APLICATIVO}_db" class="ch.qos.logback.core.FileAppender">
+		<file>${jboss.server.log.dir}/${APLICATIVO}/${APLICATIVO}_db.log
+		</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level - %msg %n
+			</pattern>
+		</encoder>
+	</appender>
+	<!-- log de usuario -->
+	<appender name="${APLICATIVO}_usr" class="ch.qos.logback.core.FileAppender">
+		<file>${jboss.server.log.dir}/${APLICATIVO}/${APLICATIVO}_usr.log
+		</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level - %msg %n
+			</pattern>
+		</encoder>
+	</appender>
+	<appender name="${APLICATIVO}_mon" class="ch.qos.logback.core.FileAppender">
+		<file>${jboss.server.log.dir}/${APLICATIVO}/${APLICATIVO}_mon.log
+		</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level - %msg %n
+			</pattern>
+		</encoder>
+	</appender>
+	<appender name="${APLICATIVO}_con" class="ch.qos.logback.core.FileAppender">
+		<file>${jboss.server.log.dir}/${APLICATIVO}/${APLICATIVO}_con.log
+		</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level - %msg %n
+			</pattern>
+		</encoder>
+	</appender>
+	<!-- especificación -->
+	<logger name="${APLICATIVO}" level="info" additivity="false">
+		<appender-ref ref="${APLICATIVO}" />
+	</logger>
+	<logger name="${APLICATIVO}_err" level="error" additivity="false">
+		<appender-ref ref="${APLICATIVO}_err" />
+	</logger>
+	<logger name="${APLICATIVO}_db" level="info" additivity="false">
+		<appender-ref ref="${APLICATIVO}_db" />
+	</logger>
+	<logger name="${APLICATIVO}_usr" level="info" additivity="false">
+		<appender-ref ref="${APLICATIVO}_usr" />
+	</logger>
+	<logger name="${APLICATIVO}_con" level="info" additivity="false">
+		<appender-ref ref="${APLICATIVO}_con" />
+	</logger>
+	<logger name="${APLICATIVO}_mon" level="info" additivity="false">
+		<appender-ref ref="${APLICATIVO}_mon" />
+	</logger>
+	<!-- test -->
+	<root level="info">
+		<appender-ref ref="sif" />
+	</root>
+	<root level="error">
+		<appender-ref ref="${APLICATIVO}_err" />
+	</root>
+	<root level="info">
+		<appender-ref ref="${APLICATIVO}_db" />
+	</root>
+	<root level="info">
+		<appender-ref ref="${APLICATIVO}_usr" />
+	</root>
+	<root level="info">
+		<appender-ref ref="${APLICATIVO}_con" />
+	</root>
+	<root level="info">
+		<appender-ref ref="${APLICATIVO}_mon" />
+	</root>
+</configuration>

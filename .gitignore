@@ -1,0 +1,23 @@
+# Compiled
+build/
+*.class
+*.jar
+*.war
+
+# IDE
+.settings/
+.classpath
+.project
+*.iml
+.idea/
+
+# Config con credenciales
+configFiles/sifProd/
+configFiles/sifCert/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/

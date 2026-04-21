@@ -1,0 +1,11 @@
+# LDAP Configuration
+# Copiar este archivo a config.properties y llenar los valores reales
+ldap.url=ldap://localhost:389
+ldap.manager.dn=cn=admin,dc=example,dc=com
+ldap.password=changeme
+ldap.search.base=dc=example,dc=com
+ldap.group.base=ou=Groups,dc=example,dc=com
+
+# Database (JNDI)
+db.jndi.name=jdbc/sif
+db.dialect=org.hibernate.dialect.Oracle10gDialect

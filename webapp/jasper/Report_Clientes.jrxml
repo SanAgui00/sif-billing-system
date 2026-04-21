@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Report_Serv" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="98103322-66b6-4375-a3dd-ec50ddddc3d3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="sif_db"/>
+	<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="reportHomePath" class="java.io.File" isForPrompting="false"/>
+	<queryString language="SQL">
+		<![CDATA[select * from tbl_sif_cat_clientes]]>
+	</queryString>
+	<field name="ID_GRUPO_VOL" class="java.math.BigDecimal"/>
+	<field name="ESTATUS" class="java.lang.String"/>
+	<field name="B_INCLUIR_REBATE" class="java.math.BigDecimal"/>
+	<field name="USUARIO" class="java.lang.String"/>
+	<field name="FECHA_MOD" class="java.sql.Timestamp"/>
+	<field name="COMENTARIOS" class="java.lang.String"/>
+	<field name="ID_CLIENTE" class="java.math.BigDecimal"/>
+	<field name="CLAVE_CLIENTE" class="java.lang.String"/>
+	<field name="ID_DOMICILIO" class="java.math.BigDecimal"/>
+	<field name="NOMBRE_CORTO" class="java.lang.String"/>
+	<field name="RAZON_SOCIAL" class="java.lang.String"/>
+	<field name="RFC" class="java.lang.String"/>
+	<field name="CURP" class="java.lang.String"/>
+	<field name="FIID" class="java.math.BigDecimal"/>
+	<field name="PCT_IVA" class="java.math.BigDecimal"/>
+	<field name="TELEFONO_PRIC" class="java.lang.String"/>
+	<field name="B_CLIENTE_CONSORCIO" class="java.math.BigDecimal"/>
+	<field name="B_CLIENTE_NACIONAL" class="java.math.BigDecimal"/>
+	<field name="B_CLIENTE_SOCIO" class="java.math.BigDecimal"/>
+	<field name="INF_ADDICIONAL" class="java.lang.String"/>
+	<field name="INF_ADDICIONAL_1" class="java.lang.String"/>
+	<field name="CLAVE_FORMAPAGO_SAT" class="java.lang.String"/>
+	<field name="CLAVE_RESIDFISCAL_SAT" class="java.lang.String"/>
+	<field name="NUMERO_IDFISCAL_SAT" class="java.lang.String"/>
+	<title>
+		<band height="95">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<staticText>
+				<reportElement x="300" y="0" width="480" height="40" uuid="e7dea2d6-42a8-4976-b537-293fde9618d4"/>
+				<textElement>
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE CLIENTES]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="0" width="220" height="40" uuid="595a19ec-c7c7-4a58-a80b-24488958fa23"/>
+				<imageExpression><![CDATA[$P{reportHomePath}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="1" y="50" width="80" height="30" uuid="0e431414-8ffa-4437-b882-cab9df7e02f1"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLAVE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="50" width="80" height="30" uuid="d8882e24-a7e4-4266-a880-e9c677fad419"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE CORTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="50" width="80" height="30" uuid="e2dc3de4-11b2-4f15-aa7d-f12db9eae728"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RFC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="50" width="80" height="30" uuid="91083bee-60d2-4499-a350-141bd2f00550"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TELEFONO PRINCIPAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="50" width="80" height="30" uuid="5c92390b-9d32-497c-8c77-a71897e525ca"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONTACTO FACTURA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="580" y="50" width="80" height="30" uuid="bc98cbcf-6499-4bad-9169-e84849636a9d"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTATUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="694" y="50" width="80" height="30" uuid="ec397fec-15eb-47c6-a345-7ff5230b0d5d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ULTIMA MODIFICACION]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="80" width="800" height="1" uuid="86e15eb0-cd90-49c0-b8d2-cf5e1ff458a5">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="9" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="56" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<textField>
+				<reportElement x="0" y="0" width="81" height="56" uuid="afe64e34-7bb0-4abb-ae1e-9de1632c9d77"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CLAVE_CLIENTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="140" height="56" uuid="596e6eb7-0165-4b58-9d7f-ef20f0e0762e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NOMBRE_CORTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="0" width="80" height="56" uuid="e798ffe1-b7a2-4dc6-9051-a050175947cf"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{RFC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="110" height="56" uuid="d6b2cba6-dfac-410f-8515-16a27909fc59"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{TELEFONO_PRIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="0" width="100" height="56" uuid="f7f3e5f5-037f-40fc-b197-395e30db350b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ID_CLIENTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="580" y="0" width="80" height="56" uuid="d3d36814-72ff-4d52-ac10-6fc30c59f9e5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ESTATUS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="670" y="0" width="132" height="56" uuid="fd8fba9c-2f88-4ad2-a422-41c072cfeda1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{FECHA_MOD}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="680" y="20" width="100" height="20" uuid="1b037f7d-ea2e-4d47-8132-73b435d707a3"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

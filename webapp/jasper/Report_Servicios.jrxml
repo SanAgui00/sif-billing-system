@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Serv" language="javascript" pageWidth="750" pageHeight="842" columnWidth="710" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c6bc8c1d-5812-4136-b4a3-a769283501b4">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="sif_db"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<queryString>
+		<![CDATA[select * from TBL_SIF_SERVICIOS]]>
+	</queryString>
+	<field name="ID_SERVICIOS" class="java.math.BigDecimal"/>
+	<field name="ID_FUENTE" class="java.math.BigDecimal"/>
+	<field name="ID_NEGOCIO" class="java.math.BigDecimal"/>
+	<field name="ID_PRECIO" class="java.math.BigDecimal"/>
+	<field name="ID_FORMA_PAGO" class="java.math.BigDecimal"/>
+	<field name="ID_GRUPO_VOL" class="java.math.BigDecimal"/>
+	<field name="ID_GRUPO_CONCEPTO" class="java.math.BigDecimal"/>
+	<field name="ID_MONEDA_IMPORTE_ADQ" class="java.math.BigDecimal"/>
+	<field name="ID_MONEDA_ADQ" class="java.math.BigDecimal"/>
+	<field name="ID_CENTRO_COSTOS" class="java.math.BigDecimal"/>
+	<field name="CLAVE" class="java.lang.String"/>
+	<field name="DESCRIPCION" class="java.lang.String"/>
+	<field name="ESTATUS" class="java.lang.String"/>
+	<field name="B_ADQUISICION_AUTO" class="java.math.BigDecimal"/>
+	<field name="PERIODICIDAD_ADQUISICION" class="java.lang.String"/>
+	<field name="PERIODICIDAD_COBRO" class="java.lang.String"/>
+	<field name="DIAS_HABILES_COBRO" class="java.math.BigDecimal"/>
+	<field name="DIA_LIMITE_SOLICITUD" class="java.math.BigDecimal"/>
+	<field name="B_HABILITAR_OP_AV" class="java.math.BigDecimal"/>
+	<field name="REALIZAR_ENVIO" class="java.lang.String"/>
+	<field name="REALIZAR_REG_CONT" class="java.lang.String"/>
+	<field name="REALIZAR_EMISION_FACT" class="java.lang.String"/>
+	<field name="B_AUTO_COBRO" class="java.lang.String"/>
+	<field name="B_AUTO_REG_CONT" class="java.lang.String"/>
+	<field name="B_INCLUIR_REBATE" class="java.math.BigDecimal"/>
+	<field name="UNIDAD_MEDIDA" class="java.lang.String"/>
+	<field name="TIPO_CARGO" class="java.lang.String"/>
+	<field name="SISTEM_COBRO" class="java.lang.String"/>
+	<field name="B_CAPTURA_IMP_LIQUIDADO" class="java.math.BigDecimal"/>
+	<field name="B_PRECIO_CONTROLADO" class="java.math.BigDecimal"/>
+	<field name="B_ADQUISICION_SIN_IVA" class="java.math.BigDecimal"/>
+	<field name="B_INFO_EXTRA_DESC_SUBCONCEP" class="java.math.BigDecimal"/>
+	<field name="B_INFO_EXTRA_TRANSACCION" class="java.math.BigDecimal"/>
+	<field name="B_IMP_CANTIDAD_EN_FACT" class="java.math.BigDecimal"/>
+	<field name="B_IMP_COSTO_UNITARIO" class="java.math.BigDecimal"/>
+	<field name="USUARIO" class="java.lang.String"/>
+	<field name="FECHA_CRE" class="java.sql.Timestamp"/>
+	<field name="FECHA_MOD" class="java.sql.Timestamp"/>
+	<field name="COMENTARIOS" class="java.lang.String"/>
+	<field name="TIPO_SERVICIO" class="java.lang.String"/>
+	<field name="REALIZAR_CALCULO" class="java.lang.String"/>
+	<field name="CUENTA_INGRESO" class="java.lang.String"/>
+	<field name="UMEDIDA_FACTURA" class="java.lang.String"/>
+	<field name="ID_SERV_PART" class="java.math.BigDecimal"/>
+	<field name="ID_CAT_INGRESO" class="java.math.BigDecimal"/>
+	<field name="CLAVE_SERVICIO_SAT" class="java.lang.String"/>
+	<field name="CLAVE_UNIDAD_SAT" class="java.lang.String"/>
+	<field name="CLAVE_IMPUESTO_SAT" class="java.lang.String"/>
+	<field name="CLAVE_FACTOR_SAT" class="java.lang.String"/>
+	<field name="VALOR_TASA_SAT" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="96" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="230" y="50" width="490" height="46" uuid="e89ef040-099a-4ad1-b81f-be5c910dbd8c"/>
+				<textElement>
+					<font fontName="Arial" size="26"/>
+				</textElement>
+				<text><![CDATA[Reporte de Catalogo de Servicios]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="0264e16f-657b-4771-8ce6-38d155c56bbd"/>
+				<text><![CDATA[CLAVE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="-2" width="100" height="30" uuid="f96c9ccb-4874-4fc0-9f53-e6a890d4b7f7"/>
+				<text><![CDATA[DESCRIPCION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="100" height="30" uuid="43cf3ccb-a84a-4ec0-8273-e5bbd28ce7f2"/>
+				<text><![CDATA[ID_GRUPO_CONCEPTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="-2" width="100" height="30" uuid="9fe8f71c-439e-4b02-9f56-2605c80e0d3a"/>
+				<text><![CDATA[ID_NEGOCIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="-2" width="100" height="30" uuid="85f47b50-b608-471c-9a26-c2d9ffd60797"/>
+				<text><![CDATA[B_ADQUISICION_AUTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="0" width="100" height="30" uuid="29cc5e30-3331-47d0-a3df-57d93be6c0ab"/>
+				<text><![CDATA[ESTATUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="520" y="0" width="100" height="30" uuid="cd719f97-c22f-4571-95a8-0fc8ea8e52c1"/>
+				<text><![CDATA[FECHA_MOD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="620" y="4" width="100" height="30" uuid="a7118cf3-76b2-40c6-9bdd-4536aebba4e4"/>
+				<text><![CDATA[PERIODICIDAD_COBRO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="-1" y="0" width="100" height="30" uuid="4124c372-264a-4a75-8c95-bb48d6bbf895"/>
+				<textFieldExpression><![CDATA[$F{CLAVE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="-2" width="100" height="30" uuid="949dea7e-96d9-43cc-a3a2-bf34645ce56e"/>
+				<textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="0" width="100" height="30" uuid="39c1cbb0-0394-4c38-9911-02c873fb90ec"/>
+				<textFieldExpression><![CDATA[$F{ID_GRUPO_CONCEPTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="0" width="100" height="30" uuid="32ff904c-61d7-4aa4-b537-ed1e6a0746a1"/>
+				<textFieldExpression><![CDATA[$F{ID_NEGOCIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="-2" width="100" height="30" uuid="2e9fea67-8d0d-4d6e-a3e7-225887b6bef1"/>
+				<textFieldExpression><![CDATA[$F{B_ADQUISICION_AUTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="-2" width="100" height="30" uuid="150614d2-0461-40e1-9040-61fa1cbacd53"/>
+				<textFieldExpression><![CDATA[$F{ESTATUS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="520" y="0" width="100" height="30" uuid="684f6da3-c9d5-4761-ab5b-6cf52256d0fe"/>
+				<textFieldExpression><![CDATA[$F{FECHA_MOD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="0" width="100" height="30" uuid="5cbe55e1-640a-42f0-b2dc-e585a542eecc"/>
+				<textFieldExpression><![CDATA[$F{PERIODICIDAD_COBRO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,65 @@
+// ESTILO CONTENEDOR
+@import bits
+.center-vertical 
+	display: flex
+	flex-direction: column
+
+.margin-top
+	margin-top: 5px
+
+.full-shadow
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.27)
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.27)
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.27)
+	border-radius: 0.25rem
+
+.auto
+	margin-top: auto $i
+	margin-bottom: auto $i
+
+.the-title
+	padding: 0px
+
+.alert
+	margin-bottom: 0 $i
+
+.card-header
+	padding: 0.45rem 1rem
+
+.background-login
+	background-image: url('../imagenes/background-login.svg')
+	background-position: center
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	background-size: cover
+	-o-background-size: cover
+
+.background-home
+	background-image: url('../imagenes/background-home.svg')
+	background-position: center
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	background-size: cover
+	-o-background-size: cover
+
+.bienvenido
+	font-family: 'Roboto', sans-serif
+
+.bg-secondary
+	background-color: $color-bg-secondary  $i
+	border: $border
+	border-left: none
+	border-right: none
+
+.dropdown-menu
+	font-size: $font-size
+
+.nav-link.tab-link.active
+	color: $color-red $i
+
+
+
+@for $num from 10 through 20
+	.#{sif-width}-#{$num*10}
+		width: $num*10px
+        

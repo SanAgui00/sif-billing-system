@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE xml>
+<project name="sif" default="war">
+    <path id="compile.classpath">
+        <fileset dir="webapp/WEB-INF/lib">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+    <target name="init">
+        <mkdir dir="build/classes" />
+        <mkdir dir="dist" />
+    </target>
+    <target name="compile" depends="init">
+        <javac destdir="build/classes" debug="true" srcdir="src" includeantruntime="false">
+            <classpath refid="compile.classpath" />
+        </javac>
+    </target>
+    <target name="war" depends="compile">
+        <war destfile="dist/sifProd/sif.war" webxml="webapp/WEB-INF/web.xml">
+            <zipfileset dir="configFiles/sifProd/" includes="spring-security.xml" prefix="WEB-INF/" />
+            <fileset dir="webapp" />
+            <lib dir="webapp/WEB-INF/lib" />
+            <classes dir="build/classes" />
+        </war>
+        <war destfile="dist/sifDesa/sif.war" webxml="webapp/WEB-INF/web.xml">
+            <zipfileset dir="configFiles/sifDesa/" includes="spring-security.xml" prefix="WEB-INF/" />
+            <fileset dir="webapp" />
+            <lib dir="webapp/WEB-INF/lib" />
+            <classes dir="build/classes" />
+        </war>
+        <war destfile="dist/sifCert/sif.war" webxml="webapp/WEB-INF/web.xml">
+            <zipfileset dir="configFiles/sifCert/" includes="spring-security.xml" prefix="WEB-INF/" />
+            <fileset dir="webapp" />
+            <lib dir="webapp/WEB-INF/lib" />
+            <classes dir="build/classes" />
+        </war>
+    </target>
+    <target name="clean">
+        <delete dir="bin" />
+        <delete dir="build" />
+        <delete dir="doc" />
+    </target>
+</project>

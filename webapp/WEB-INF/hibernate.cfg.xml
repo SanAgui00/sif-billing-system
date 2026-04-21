@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	<!-- Perfil produccion/certificacion: fuente de datos Oracle via JNDI -->
+	<jee:jndi-lookup jndi-name="${db.jndi.name:java:/jdbc/sif}"
+		id="dataSource" expected-type="javax.sql.DataSource">
+	</jee:jndi-lookup>
+
+	<!--
+	  Perfil desarrollo local (H2 in-memory):
+	  Para activar, reemplazar el bean dataSource de arriba por este bloque
+	  y agregar h2 como dependencia (scope test/provided).
+
+	  <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	    <property name="driverClassName" value="org.h2.Driver"/>
+	    <property name="url" value="jdbc:h2:mem:sif;DB_CLOSE_DELAY=-1;INIT=RUNSCRIPT FROM 'classpath:schema-h2.sql'\;RUNSCRIPT FROM 'classpath:data-h2.sql'"/>
+	    <property name="username" value="sa"/>
+	    <property name="password" value=""/>
+	  </bean>
+	  Cambiar tambien hibernate.dialect a org.hibernate.dialect.H2Dialect
+	-->
+	<context:annotation-config></context:annotation-config>
+	<context:component-scan
+		base-package="com.prosa.sif.dao"></context:component-scan>
+	<context:component-scan
+		base-package="com.prosa.sif.operation"></context:component-scan>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="packagesToScan" value="com.prosa.sif.pojo"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+
+	</bean>
+
+
+	<bean id="exceptionTranslator"
+		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor">
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<tx:annotation-driven
+		transaction-manager="transactionManager" />
+</beans>
